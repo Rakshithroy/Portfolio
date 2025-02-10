@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
+import Image from "next/image";
 
 const travelImages = [
   "/travel/travel1.jpg",
@@ -51,11 +52,7 @@ export default function BeyondWork() {
         >
           {travelImages.map((image, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <img
-                src={image}
-                alt={`Travel ${index + 1}`}
-                className="w-[300px] h-[200px] object-cover rounded-lg shadow-md"
-              />
+              <Image src={image} alt={`Travel ${index + 1}`} width={1920} height={1080} className="w-full h-full object-cover" />
             </SwiperSlide>
           ))}
         </Swiper>
