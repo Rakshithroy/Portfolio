@@ -48,7 +48,7 @@ export default function Hero() {
           </a>
           <a href="#contact">
             <Button className="px-6 py-3 bg-gray-700 hover:bg-gray-800 text-white font-bold rounded-lg shadow-md">
-              Let's Connect
+              Let&apos;s Connect
             </Button>
           </a>
         </div>

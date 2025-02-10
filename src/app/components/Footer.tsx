@@ -12,9 +12,9 @@ export default function Footer() {
         transition={{ duration: 0.8 }}
       >
         {/* 🔹 Contact Section Moved to Footer */}
-        <h2 className="text-4xl font-bold">Let's Connect</h2>
+        <h2 className="text-4xl font-bold">Let&apos;s Connect</h2>
         <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-          Whether you're looking for a software engineer or just want to say hi, I'm always open to new conversations.
+          Whether you&apos;re looking for a software engineer or just want to say hi, I&apos;m always open to new conversations.
         </p>
 
         {/* 🔹 Contact Links */}
@@ -28,12 +28,13 @@ export default function Footer() {
           <a href="https://github.com/Rakshithroy" target="_blank" className="text-blue-400 hover:scale-110 transition">
             💻 GitHub
           </a>
-          <a href="public\Rakshith_Roy_Gantagogula_SE.pdf"
-            download="Rakshith_Roy_Gantagogula_SE.pdf"
+          <a href="/Rakshith_Roy_Gantagogula_SE.pdf" 
+             download 
             className="text-blue-400 hover:scale-110 transition"
-            >
-            📂 Download Resume
+          >
+             📂 Download Resume
           </a>
+
 
           <a href="https://www.instagram.com/_rakshithroy_/" target="_blank" className="text-blue-400 hover:scale-110 transition">
             📷 Instagram
