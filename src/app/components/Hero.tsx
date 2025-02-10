@@ -38,7 +38,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-          Hi, I'm Rakshith Roy. A Software Engineer passionate about scalable systems, AI, and cloud computing.
+          Hi, I&apos;m Rakshith Roy. A Software Engineer passionate about scalable systems, AI, and cloud computing.
         </motion.p>
         <div className="mt-6 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a href="#projects">
