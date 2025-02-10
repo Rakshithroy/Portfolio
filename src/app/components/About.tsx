@@ -27,7 +27,7 @@ export default function About() {
         {/* About Content */}
         <div className="text-left max-w-2xl space-y-4">
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            I'm <span className="font-semibold">Rakshith Roy</span>, a Software Engineer with a passion for
+            I&apos;m <span className="font-semibold">Rakshith Roy Gantagogula</span>, a Software Engineer with a passion for
             <span className="text-blue-500"> scalable systems</span>, <span className="text-blue-500"> cloud computing</span>, and
             <span className="text-blue-500"> full-stack development</span>. I thrive on designing solutions that
             <span className="font-semibold"> enhance efficiency and performance</span>.
@@ -39,7 +39,7 @@ export default function About() {
             <li>💡 Believe in <span className="font-semibold">continuous learning and innovation</span></li>
           </ul>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Let's <span className="font-semibold">connect and collaborate</span> to build the future of technology together!
+            Let&apos;s <span className="font-semibold">connect and collaborate</span> to build the future of technology together!
           </p>
         </div>
       </div>
