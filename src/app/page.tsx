@@ -1,18 +1,17 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
-import { Sun, Moon } from "lucide-react";
+import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Education from "./components/Education";  
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import BeyondWork from "./components/BeyondWork";
 import Certifications from "./components/Certifications";
+import Education from "./components/Education";
 
 export default function HomePage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -45,20 +44,21 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <About />
-      <Education />   
       <Experience />
+      <Education />
       <Projects />
       <Skills />
       <Certifications />
       <BeyondWork />
+      
       <Footer />
 
-      {/* Dark Mode Toggle */}
+      {/* 🔥 Dark Mode Toggle */}
       <button
         onClick={toggleDarkMode}
         className="fixed bottom-5 right-5 p-3 rounded-full bg-gray-200 dark:bg-gray-800 shadow-md"
       >
-        {darkMode ? <Sun size={24} className="text-yellow-500" /> : <Moon size={24} className="text-gray-700" />}
+        {darkMode ? "🌞" : "🌙"}
       </button>
     </div>
   );
