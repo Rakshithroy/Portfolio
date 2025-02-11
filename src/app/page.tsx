@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -50,7 +49,6 @@ export default function HomePage() {
       <Skills />
       <Certifications />
       <BeyondWork />
-      
       <Footer />
 
       {/* 🔥 Dark Mode Toggle */}
