@@ -1,52 +1,57 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState } from "react";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
-    <motion.nav
-      className={`fixed w-full top-0 left-0 z-50 transition-all backdrop-blur-lg ${
-        isScrolled
-          ? "bg-white text-gray-900 shadow-md dark:bg-gray-900 dark:text-white"
-          : "bg-transparent text-white dark:bg-gray-900/50 dark:text-white"
-      }`}
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* 🔹 Logo / Name */}
-        <Link
-          to="hero"
-          smooth={true}
-          duration={500}
+    <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <motion.h1
           className="text-2xl font-bold cursor-pointer"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
-          Rakshith Roy Gantagogula
-        </Link>
+          Rakshith Roy
+        </motion.h1>
 
-        {/* 🔹 Navbar Links */}
-        <ul className="flex space-x-6">
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu}>
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8 text-lg">
           <li>
             <Link
               to="about"
               smooth={true}
               duration={500}
-              className="hover:text-blue-400 transition cursor-pointer"
+              className="hover:text-blue-400 cursor-pointer"
             >
-              About Me
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className="hover:text-blue-400 cursor-pointer"
+            >
+              Projects
             </Link>
           </li>
           <li>
@@ -54,23 +59,77 @@ export default function Navbar() {
               to="contact"
               smooth={true}
               duration={500}
-              className="hover:text-blue-400 transition cursor-pointer"
+              className="hover:text-blue-400 cursor-pointer"
             >
               Contact
             </Link>
           </li>
           <li>
             <a
-              href="public\Rakshith_Roy_Gantagogula_SE.pdf"
-                download="Rakshith_Roy_Gantagogula_SE.pdf"
-              className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg shadow-md transition"
+              href="/Rakshith_Roy_Gantagogula_SE.pdf"
+              download
+              className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg font-bold text-white transition"
             >
-             Download Resume
+              Download Resume
             </a>
           </li>
         </ul>
       </div>
-    </motion.nav>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <motion.div
+          className="md:hidden bg-gray-900 w-full py-4 px-6 absolute top-16 left-0"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ul className="flex flex-col space-y-4 text-lg">
+            <li>
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className="hover:text-blue-400 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="hover:text-blue-400 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="hover:text-blue-400 cursor-pointer"
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
+              <a
+                href="/Rakshith_Roy_Gantagogula_SE.pdf"
+                download
+                className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg font-bold text-white transition block text-center"
+              >
+                Download Resume
+              </a>
+            </li>
+          </ul>
+        </motion.div>
+      )}
+    </nav>
   );
 }
-
