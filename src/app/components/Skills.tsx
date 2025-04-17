@@ -9,7 +9,7 @@ const skills = [
       { name: "Python", level: 90 },
       { name: "GoLang", level: 85 },
       { name: "Java", level: 80 },
-      { name: "JavaScript (React, Next.js)", level: 75 },
+      { name: "JavaScript (React, Next.js)", level: 80 },
     ],
   },
   {
@@ -26,7 +26,7 @@ const skills = [
     items: [
       { name: "PostgreSQL", level: 80 },
       { name: "MySQL", level: 75 },
-      { name: "MongoDB", level: 70 },
+      { name: "MongoDB", level: 80 },
       { name: "SQLite", level: 70 },
     ],
   },
@@ -34,7 +34,7 @@ const skills = [
     category: "DevOps & Infrastructure",
     items: [
       { name: "Docker", level: 80 },
-      { name: "GitHub Actions", level: 75 },
+      { name: "GitHub Actions", level: 85 },
       { name: "Terraform", level: 75 },
     ],
   },
@@ -43,7 +43,7 @@ const skills = [
     items: [
       { name: "Scrum", level: 85 },
       { name: "Kanban", level: 80 },
-      { name: "CI/CD (Jenkins, GitHub Actions)", level: 75 },
+      { name: "CI/CD (Jenkins, GitHub Actions)", level: 85 },
     ],
   },
 ];

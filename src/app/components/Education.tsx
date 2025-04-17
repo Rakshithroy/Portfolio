@@ -57,7 +57,7 @@ export default function Education() {
           <div className="mt-6 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
             <h4 className="text-lg text-black font-semibold">🏆 Leadership & Achievements</h4>
             <p className="mt-2 text-gray-700 dark:text-gray-300">
-              Head of Social Media Team, Lion’s Club (2022 - 2024)
+              Head of Social Media Team, Lion&apos;s Club (2022 - 2024)
               Directed campaigns that boosted **social media engagement by 40%**, effectively promoting club initiatives.
             </p>
           </div>

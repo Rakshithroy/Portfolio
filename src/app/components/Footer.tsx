@@ -6,6 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-10 px-6 text-center">
       <motion.div
+        id="contact"
         className="max-w-4xl mx-auto"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -22,13 +23,16 @@ export default function Footer() {
           <a href="mailto:Rakshithroygantagogula@gmail.com" className="text-blue-400 hover:scale-110 transition">
             📧 Email
           </a>
+          <a href="tel:+19727304157" className="text-blue-400 hover:scale-110 transition">
+            📞 (972) 730-4157
+          </a>
           <a href="https://www.linkedin.com/in/rakshith-roy" target="_blank" className="text-blue-400 hover:scale-110 transition">
             💼 LinkedIn
           </a>
           <a href="https://github.com/Rakshithroy" target="_blank" className="text-blue-400 hover:scale-110 transition">
             💻 GitHub
           </a>
-          <a href="/Rakshith_Roy_Gantagogula_SE.pdf" 
+          <a href="/Rakshith Roy_Resume.pdf" 
              download 
             className="text-blue-400 hover:scale-110 transition"
           >
