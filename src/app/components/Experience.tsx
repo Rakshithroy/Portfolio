@@ -9,40 +9,39 @@ export default function Experience() {
       className="py-20 px-6 bg-gray-100 dark:bg-gray-900 text-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
     >
       <h2 className="text-4xl text-black font-bold">Experience</h2>
       <div className="mt-8 max-w-4xl mx-auto text-left space-y-8">
-        {/* Experience 1 */}
-        <div className="p-6 bg-gray-800 dark:bg-gray-100 rounded-lg shadow-md">
-          <h3 className="text-xl text-white dark:text-gray-900 font-semibold">
+        {/* Experience 1 - Kaseya */}
+        <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-xl text-black dark:text-white font-semibold">
             Full Stack Developer
           </h3>
-          <p className="text-gray-300 dark:text-gray-600">
-            Asana, Inc., New Jersey, USA | July 2024 – Present
+          <p className="text-gray-700 dark:text-gray-300">
+            Kaseya, Red Bank, NJ | July 2024 – Present
           </p>
-          <ul className="mt-4 text-gray-300 dark:text-gray-600 list-disc list-inside">
-            <li>Architected front-end features with Angular, Java, and Python, improving performance by 40%.</li>
-            <li>Enhanced system performance by 30% through optimized React.js and Python backends.</li>
-            <li>Engineered Golang-based microservices, reducing deployment time by 40%.</li>
-            <li>Boosted API performance with Node.js and Express.js, cutting server load by 30%.</li>
-            <li>Integrated secure OAuth 2.0 with JWT to protect medical records.</li>
-            <li>Audited and optimized databases supporting over 500,000 records with minimal latency.</li>
-            <li>Achieved 90% test coverage using JUnit, Selenium, Cypress, and reduced defects by 40%.</li>
-            <li>Developed FastAPI-based APIs with 30% faster response times.</li>
-            <li>Led Agile teams with a 92% on-time delivery success rate.</li>
+          <ul className="mt-4 text-gray-700 dark:text-gray-300 list-disc list-inside">
+            <li>Managed user verification system using Spring Boot and microservices, deployed via Docker, Jenkins, and Kubernetes on AWS.</li>
+            <li>Improved API response time by 25% and reduced server load by 30% using Node.js and Express.js.</li>
+            <li>Built high-performance REST APIs with Java and Spring Boot, enforced integrity through JUnit-based testing.</li>
+            <li>Maintained Flask and Django backend services to streamline frontend-backend data exchange.</li>
+            <li>Streamlined CI/CD pipelines and Kubernetes deployments with Python and Jenkins tools.</li>
+            <li>Developed responsive single-page applications with React.js and Redux for enhanced UX.</li>
+            <li>Optimized IoT cloud app design with Webpack, Babel, and AWS integrations, cutting load times by 20%.</li>
+            <li>Ensured application scalability and uptime by deploying on AWS with API Gateway support.</li>
+            <li>Revamped Python and Golang content with SPA and RWD principles, improving customer retention by 25%.</li>
           </ul>
         </div>
 
         {/* Experience 2 */}
-        <div className="p-6 bg-gray-800 dark:bg-gray-100 rounded-lg shadow-md">
-          <h3 className="text-xl text-white dark:text-gray-900 font-semibold">
+        <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <h3 className="text-xl text-black dark:text-white font-semibold">
             Software Developer
           </h3>
-          <p className="text-gray-300 dark:text-gray-600">
+          <p className="text-gray-700 dark:text-gray-300">
             Hexaware Technologies, Bengaluru, India | Nov 2020 – Jul 2022
           </p>
-          <ul className="mt-4 text-gray-300 dark:text-gray-600 list-disc list-inside">
+          <ul className="mt-4 text-gray-700 dark:text-gray-300 list-disc list-inside">
             <li>Built Mosaic Cloud Platform modules with Angular, Python, and Scala, improving system performance by 40%.</li>
             <li>Developed responsive UIs using React, Next.js, and Redux, cutting load times by 9%.</li>
             <li>Created optimized RESTful APIs with Node.js, improving response speed by 25%.</li>
