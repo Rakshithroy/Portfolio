@@ -50,7 +50,7 @@ export default function Hero() {
       >
         <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
         <p className="max-w-2xl text-lg md:text-xl text-gray-700">
-          I'm a Software Engineer driven by curiosity and a love for elegant code. 
+          I&apos;m a Software Engineer driven by curiosity and a love for elegant code.
           My passion lies in building robust cloud systems and exploring AI-driven solutions.
         </p>
       </section>
