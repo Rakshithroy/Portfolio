@@ -13,16 +13,16 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md text-black shadow z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <motion.h1
-          className="text-2xl font-bold cursor-pointer"
+          className="text-2xl font-semibold tracking-tight cursor-pointer"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Rakshith Roy Gantagogula
+          Rakshith Roy
         </motion.h1>
 
         {/* Mobile Menu Icon */}
@@ -39,7 +39,7 @@ export default function Navbar() {
               to="about"
               smooth={true}
               duration={500}
-              className="hover:text-blue-400 cursor-pointer"
+              className="hover:text-gray-700 transition cursor-pointer"
             >
               About
             </Link>
@@ -49,7 +49,7 @@ export default function Navbar() {
               to="projects"
               smooth={true}
               duration={500}
-              className="hover:text-blue-400 cursor-pointer"
+              className="hover:text-gray-700 transition cursor-pointer"
             >
               Projects
             </Link>
@@ -59,18 +59,18 @@ export default function Navbar() {
               to="contact"
               smooth={true}
               duration={500}
-              className="hover:text-blue-400 cursor-pointer"
+              className="hover:text-gray-700 transition cursor-pointer"
             >
               Contact
             </Link>
           </li>
           <li>
             <a
-              href="/Rakshith Roy_Resume.pdf"
+              href="/Rakshith_Roy_Resume.pdf"
               download
-              className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg font-bold text-white transition"
+              className="bg-black text-white hover:bg-gray-900 px-5 py-2 rounded-full font-medium transition"
             >
-              Download Resume
+              Resume
             </a>
           </li>
         </ul>
@@ -79,7 +79,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
         <motion.div
-          className="md:hidden bg-gray-900 w-full py-4 px-6 absolute top-16 left-0"
+          className="md:hidden bg-white/90 backdrop-blur-md w-full py-6 px-6 absolute top-16 left-0"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -90,7 +90,7 @@ export default function Navbar() {
                 to="about"
                 smooth={true}
                 duration={500}
-                className="hover:text-blue-400 cursor-pointer"
+                className="hover:text-gray-700 transition cursor-pointer"
                 onClick={toggleMenu}
               >
                 About
@@ -101,7 +101,7 @@ export default function Navbar() {
                 to="projects"
                 smooth={true}
                 duration={500}
-                className="hover:text-blue-400 cursor-pointer"
+                className="hover:text-gray-700 transition cursor-pointer"
                 onClick={toggleMenu}
               >
                 Projects
@@ -112,7 +112,7 @@ export default function Navbar() {
                 to="contact"
                 smooth={true}
                 duration={500}
-                className="hover:text-blue-400 cursor-pointer"
+                className="hover:text-gray-700 transition cursor-pointer"
                 onClick={toggleMenu}
               >
                 Contact
@@ -120,11 +120,11 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/Rakshith_Roy_Gantagogula_SE.pdf"
+                href="/Rakshith_Roy_Resume.pdf"
                 download
-                className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg font-bold text-white transition block text-center"
+                className="bg-black text-white hover:bg-gray-900 px-5 py-2 rounded-full font-medium transition block text-center"
               >
-                Download Resume
+                Resume
               </a>
             </li>
           </ul>

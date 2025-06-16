@@ -6,21 +6,21 @@ export default function Experience() {
   return (
     <motion.section
       id="experience"
-      className="py-20 px-6 bg-gray-100 dark:bg-gray-900 text-center"
+      className="py-32 px-6 bg-white dark:bg-black text-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
     >
-      <h2 className="text-4xl text-black font-bold">Experience</h2>
-      <div className="mt-8 max-w-4xl mx-auto text-left space-y-8">
+      <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">Experience</h2>
+      <div className="mt-16 max-w-5xl mx-auto text-left space-y-12">
         {/* Experience 1 - Kaseya */}
-        <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <h3 className="text-xl text-black dark:text-white font-semibold">
+        <div className="p-10 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg">
+          <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">
             Full Stack Developer
           </h3>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-600 dark:text-gray-400">
             Kaseya, Red Bank, NJ | July 2024 – Present
           </p>
-          <ul className="mt-4 text-gray-700 dark:text-gray-300 list-disc list-inside">
+          <ul className="mt-6 text-gray-700 dark:text-gray-300 list-disc list-inside space-y-2">
             <li>Managed user verification system using Spring Boot and microservices, deployed via Docker, Jenkins, and Kubernetes on AWS.</li>
             <li>Improved API response time by 25% and reduced server load by 30% using Node.js and Express.js.</li>
             <li>Built high-performance REST APIs with Java and Spring Boot, enforced integrity through JUnit-based testing.</li>
@@ -33,15 +33,15 @@ export default function Experience() {
           </ul>
         </div>
 
-        {/* Experience 2 */}
-        <div className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-          <h3 className="text-xl text-black dark:text-white font-semibold">
+        {/* Experience 2 - Hexaware */}
+        <div className="p-10 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg">
+          <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">
             Software Developer
           </h3>
-          <p className="text-gray-700 dark:text-gray-300">
+          <p className="text-gray-600 dark:text-gray-400">
             Hexaware Technologies, Bengaluru, India | Nov 2020 – Jul 2022
           </p>
-          <ul className="mt-4 text-gray-700 dark:text-gray-300 list-disc list-inside">
+          <ul className="mt-6 text-gray-700 dark:text-gray-300 list-disc list-inside space-y-2">
             <li>Built Mosaic Cloud Platform modules with Angular, Python, and Scala, improving system performance by 40%.</li>
             <li>Developed responsive UIs using React, Next.js, and Redux, cutting load times by 9%.</li>
             <li>Created optimized RESTful APIs with Node.js, improving response speed by 25%.</li>

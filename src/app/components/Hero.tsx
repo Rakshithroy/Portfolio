@@ -6,53 +6,68 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative flex flex-col items-center justify-center h-screen text-center p-6">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+    <main className="w-full">
+      {/* Hero Section */}
+      <section
+        id="hero"
+        className="relative flex flex-col items-center justify-center h-screen px-6 text-center overflow-hidden bg-gradient-to-b from-black to-gray-900"
       >
-        <source src="/background-video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
-
-      {/* Hero Content */}
-      <div className="relative z-10">
         <motion.h1
-          className="text-5xl text-white font-bold"
-          initial={{ opacity: 0, y: -20 }}
+          className="text-6xl md:text-8xl font-semibold text-white tracking-tight"
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to My Digital Universe
+          Rakshith Roy
         </motion.h1>
         <motion.p
-          className="text-xl text-white mt-4 max-w-2xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
+          className="mt-6 text-xl md:text-2xl text-gray-300 max-w-xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
         >
-          Hi, I&apos;m Rakshith Roy. A Software Engineer passionate about scalable systems, AI, and cloud computing.
+          Crafting scalable systems & elegant digital experiences.
         </motion.p>
-        <div className="mt-6 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <div className="mt-10 flex flex-col sm:flex-row gap-4">
           <a href="#projects">
-            <Button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg shadow-md">
-              Explore My Work
+            <Button className="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-200">
+              See My Work
             </Button>
           </a>
           <a href="#contact">
-            <Button className="px-6 py-3 bg-gray-700 hover:bg-gray-800 text-white font-bold rounded-lg shadow-md">
-              Let&apos;s Connect
+            <Button className="px-8 py-4 bg-transparent border border-white text-white font-semibold rounded-full hover:bg-white hover:text-black">
+              Contact Me
             </Button>
           </a>
         </div>
-      </div>
-    </section>
+        <span className="absolute bottom-10 text-white/70 animate-bounce">↓ Scroll</span>
+      </section>
+
+      {/* About Me Section */}
+      <section
+        id="about"
+        className="flex flex-col items-center justify-center py-32 px-6 bg-white text-black text-center"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
+        <p className="max-w-2xl text-lg md:text-xl text-gray-700">
+          I'm a Software Engineer driven by curiosity and a love for elegant code. 
+          My passion lies in building robust cloud systems and exploring AI-driven solutions.
+        </p>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section
+        id="featured-projects"
+        className="flex flex-col items-center justify-center py-32 px-6 bg-gray-100 text-black text-center"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+        <p className="max-w-2xl text-lg md:text-xl text-gray-700">
+          A glimpse into some of my most exciting work, blending technology and creativity.
+        </p>
+        <a href="#projects" className="mt-8 inline-block text-blue-600 font-semibold underline">
+          View All Projects
+        </a>
+      </section>
+    </main>
   );
 }

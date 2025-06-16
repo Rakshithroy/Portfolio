@@ -14,7 +14,7 @@ const travelImages = [
   "/travel/travel5.jpg",
   "/travel/travel6.jpg",
   "/travel/travel7.jpg",
-  "/travel/travel8.jpg",,
+  "/travel/travel8.jpg",
   "/travel/travel10.jpg",
   "/travel/travel12.jpg",
 ];
@@ -51,7 +51,14 @@ export default function BeyondWork() {
         >
           {travelImages.map((image, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <Image src={image || "/default-image.jpg"} alt={`Travel ${index + 1}`} className="w-full h-full object-cover" />
+              <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+                <Image 
+                  src={image || "/default-image.jpg"} 
+                  alt={`Travel ${index + 1}`} 
+                  fill 
+                  className="object-cover" 
+                />
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

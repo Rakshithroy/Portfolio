@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -16,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rakshith Roy | Software Engineer Portfolio",
   description: "Portfolio of Rakshith Roy, a Software Engineer specializing in AI, cloud computing, and full-stack development.",
+  icons: {
+    icon: "/Roy.svg",
+  },
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -25,12 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/Roy.svg" type="image/svg+xml" />
-        <meta name="theme-color" content="#ffffff" />
-      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black min-h-screen`}
       >
         {children}
       </body>

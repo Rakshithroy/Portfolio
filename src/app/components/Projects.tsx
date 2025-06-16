@@ -64,29 +64,29 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-20 px-6 text-center"
+      className="py-32 px-6 text-center bg-white dark:bg-black"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-4xl font-bold">Projects</h2>
-      <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-        Here are some of my best works from GitHub and academic projects.
+      <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">Projects</h2>
+      <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        A showcase of my academic and personal projects demonstrating practical solutions and technical depth.
       </p>
 
       {/* Toggle Button */}
-      <div className="mt-6 flex justify-center">
+      <div className="mt-10 flex justify-center gap-4">
         <button
-          className={`px-6 py-2 mx-2 rounded-md text-white font-bold shadow-md transition ${
-            showAcademic ? "bg-blue-600" : "bg-gray-500 hover:bg-gray-600"
+          className={`px-8 py-3 rounded-full text-white font-semibold shadow transition ${
+            showAcademic ? "bg-black dark:bg-white dark:text-black" : "bg-gray-500 hover:bg-gray-600"
           }`}
           onClick={() => setShowAcademic(true)}
         >
           Academic Projects
         </button>
         <button
-          className={`px-6 py-2 mx-2 rounded-md text-white font-bold shadow-md transition ${
-            !showAcademic ? "bg-blue-600" : "bg-gray-500 hover:bg-gray-600"
+          className={`px-8 py-3 rounded-full text-white font-semibold shadow transition ${
+            !showAcademic ? "bg-black dark:bg-white dark:text-black" : "bg-gray-500 hover:bg-gray-600"
           }`}
           onClick={() => setShowAcademic(false)}
         >
@@ -95,25 +95,25 @@ export default function Projects() {
       </div>
 
       {/* Project List */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
         {(showAcademic ? academicProjects : personalProjects).map((project, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md text-left"
+            className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <h3 className="text-xl text-black font-semibold">{project.title}</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">{project.title}</h3>
             {"institution" in project && (
-              <p className="text-sm text-gray-500 dark:text-gray-400">{project.institution}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{project.institution}</p>
             )}
-            <p className="mt-2 text-gray-600 dark:text-gray-300">{project.description}</p>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <p className="mb-4 text-gray-700 dark:text-gray-300">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mb-4">
               {project.techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full"
+                  className="px-3 py-1 bg-black text-white dark:bg-white dark:text-black text-xs font-semibold rounded-full"
                 >
                   {tech}
                 </span>
@@ -124,7 +124,7 @@ export default function Projects() {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block text-blue-500 hover:underline"
+                className="inline-block text-blue-600 font-medium hover:underline"
               >
                 View on GitHub
               </a>

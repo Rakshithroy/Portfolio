@@ -12,7 +12,7 @@ export default function Education() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-4xl font-bold mb-6">🎓 Education</h2>
+      <h2 className="text-5xl font-bold mb-6">🎓 Education</h2>
 
       <div className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-10">
         {/* 🔹 UTD Background Image */}
@@ -20,9 +20,9 @@ export default function Education() {
           <Image 
             src="/icons/UTDCampus.jpg" 
             alt="University of Texas at Dallas" 
-            layout="fill" 
-            objectFit="cover" 
-            className="rounded-lg shadow-lg"
+            width={1200}
+            height={800}
+            className="w-full h-full object-cover rounded-lg shadow-lg"
           />
           <div className="absolute inset-0 bg-black/40 rounded-lg" /> {/* Overlay for readability */}
         </div>

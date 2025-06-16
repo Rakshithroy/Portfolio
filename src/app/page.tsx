@@ -3,8 +3,6 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
@@ -42,10 +40,8 @@ export default function HomePage() {
     <div className={`relative min-h-screen ${darkMode ? "bg-gray-900 text-white" : "bg-white text-gray-900"}`}>
       <Navbar />
       <Hero />
-      <About />
       <Experience />
       <Education />
-      <Projects />
       <Skills />
       <Certifications />
       <BeyondWork />

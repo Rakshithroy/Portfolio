@@ -45,53 +45,46 @@ export default function Certifications() {
   return (
     <motion.section
       id="certifications"
-      className="py-20 px-6 text-center"
+      className="py-32 px-6 text-center bg-white dark:bg-black"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-4xl font-bold">🎓 Certifications & Achievements</h2>
-      <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-        Continuous learning is key to staying ahead in tech. Here are some of my certifications that validate my expertise in cloud computing, DevOps, and software development.
+      <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">🎓 Certifications & Achievements</h2>
+      <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Continuous learning keeps me ahead in tech. These credentials validate my skills in cloud, DevOps, and software engineering.
       </p>
 
-      {/* Certifications Grid */}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
         {certifications.map((cert, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md text-left relative"
+            className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg text-left relative"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            {/* Header with Company Logo */}
             <div className="flex items-center space-x-4">
-              {/* Company Logo */}
               <Image src={cert.companyLogo} alt={cert.issuer} width={50} height={50} className="rounded-md" />
-
               <div>
-                <h3 className="text-xl text-black font-semibold">{cert.title}</h3>
+                <h3 className="text-2xl font-semibold text-black dark:text-white">{cert.title}</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">{cert.issuer}</p>
               </div>
             </div>
 
-            {/* Description */}
-            {expanded === index ? (
-              <p className="mt-4 text-gray-600 dark:text-gray-300">{cert.description}</p>
-            ) : null}
+            {expanded === index && (
+              <p className="mt-4 text-gray-700 dark:text-gray-300">{cert.description}</p>
+            )}
 
-            {/* Badge (For AWS & Terraform) */}
             {cert.badge && (
               <div className="mt-4 flex justify-center">
                 <Image src={cert.badge} alt="Certification Badge" width={150} height={150} className="rounded-md" />
               </div>
             )}
 
-            {/* Links */}
-            <div className="mt-4">
+            <div className="mt-4 flex items-center gap-4">
               <button
-                className="text-blue-500 hover:underline"
+                className="text-blue-600 hover:underline font-medium"
                 onClick={() => setExpanded(expanded === index ? null : index)}
               >
                 {expanded === index ? "Show Less" : "Show More"}
@@ -102,7 +95,7 @@ export default function Certifications() {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="ml-4 text-green-500 hover:underline"
+                  className="text-green-600 hover:underline font-medium"
                 >
                   View Credential
                 </a>
