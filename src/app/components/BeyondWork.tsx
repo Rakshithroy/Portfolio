@@ -21,13 +21,13 @@ const travelImages = [
 
 export default function BeyondWork() {
   return (
-    <motion.section
-      id="beyond-work"
-      className="w-full py-16 bg-gray-900 text-white text-center"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
+      <motion.section
+        id="beyond-work"
+        className="w-full py-16 text-center text-slate-900 dark:text-slate-100"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
       {/* 🔹 Title */}
       <motion.h2
         className="text-5xl font-bold mb-8"
@@ -65,8 +65,8 @@ export default function BeyondWork() {
       </div>
 
       {/* 🔹 Text Content Below */}
-      <motion.p
-        className="mt-8 text-lg max-w-3xl mx-auto px-6"
+        <motion.p
+          className="mt-8 text-lg max-w-3xl mx-auto px-6 text-slate-700 dark:text-slate-300"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
