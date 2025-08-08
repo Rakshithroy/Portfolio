@@ -83,43 +83,45 @@ const skills = [
 
 export default function Skills() {
   return (
-    <motion.section
-      id="skills"
-      className="py-32 px-6 text-center bg-white dark:bg-black"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">Skills & Technologies</h2>
-      <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        A curated showcase of my technical expertise, honed through real-world projects and industry experience.
-      </p>
+      <motion.section
+        id="skills"
+        className="py-32 px-6 text-center text-slate-900 dark:text-slate-100"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-5xl font-bold mb-6 text-slate-900 dark:text-white">Skills & Technologies</h2>
+        <p className="mt-2 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          A curated showcase of my technical expertise, honed through real-world projects and industry experience.
+        </p>
 
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg"
-          >
-            <h3 className="text-2xl font-semibold mb-6 text-black dark:text-white">{skill.category}</h3>
-            {skill.items.map((item, i) => (
-              <div key={i} className="mb-5">
-                <div className="flex justify-between text-gray-700 dark:text-gray-300 font-medium">
-                  <span>{item.name}</span>
-                  <span>{item.level}%</span>
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="p-8 ios-card rounded-2xl transition hover:shadow-xl"
+            >
+              <h3 className="text-2xl font-semibold mb-6 text-slate-900 dark:text-white">{skill.category}</h3>
+              {skill.items.map((item, i) => (
+                <div key={i} className="mb-5">
+                  <div className="flex justify-between text-slate-700 dark:text-slate-300 font-medium">
+                    <span>{item.name}</span>
+                    <span>{item.level}%</span>
+                  </div>
+                  <div className="mt-2 w-full bg-white/40 dark:bg-gray-800/40 rounded-full h-3 overflow-hidden">
+                    <motion.div
+                      className="h-3 bg-slate-900 dark:bg-slate-100 rounded-full"
+                      initial={{ width: "0%" }}
+                      whileInView={{ width: `${item.level}%` }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 1 }}
+                    />
+                  </div>
                 </div>
-                <div className="mt-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
-                  <motion.div
-                    className="h-3 bg-black dark:bg-white rounded-full"
-                    initial={{ width: "0%" }}
-                    animate={{ width: `${item.level}%` }}
-                    transition={{ duration: 1 }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        ))}
+              ))}
+            </div>
+          ))}
       </div>
     </motion.section>
   );
