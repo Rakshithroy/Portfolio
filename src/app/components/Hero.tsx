@@ -29,14 +29,13 @@ export default function Hero() {
           Crafting scalable systems & elegant digital experiences.
         </motion.p>
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
-          <a href="#projects">
-            <Button>See My Work</Button>
-          </a>
-          <a href="#contact">
-            <Button className="bg-transparent dark:bg-transparent border border-slate-900/20 dark:border-slate-100/20 hover:bg-white/40 dark:hover:bg-gray-800/40">
-              Contact Me
-            </Button>
-          </a>
+          <Button href="#projects">See My Work</Button>
+          <Button
+            href="#contact"
+            className="bg-transparent dark:bg-transparent border border-slate-900/20 dark:border-slate-100/20 hover:bg-white/40 dark:hover:bg-gray-800/40"
+          >
+            Contact Me
+          </Button>
         </div>
         <span className="absolute bottom-10 text-slate-700 dark:text-white/70 animate-bounce">↓ Scroll</span>
       </section>
@@ -62,9 +61,9 @@ export default function Hero() {
         <p className="max-w-2xl text-lg md:text-xl text-slate-700 dark:text-slate-300">
           A glimpse into some of my most exciting work, blending technology and creativity.
         </p>
-        <a href="#projects" className="mt-8 inline-block text-blue-600 font-semibold underline">
+        <Button href="#projects" className="mt-8">
           View All Projects
-        </a>
+        </Button>
       </section>
     </main>
   );
