@@ -9,7 +9,8 @@ export default function About() {
       id="about"
       className="py-32 px-6 text-center text-slate-900 dark:text-slate-100"
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
       <h2 className="text-5xl font-bold mb-10 text-slate-900 dark:text-white">Who Am I?</h2>

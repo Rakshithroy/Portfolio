@@ -87,7 +87,8 @@ export default function Skills() {
         id="skills"
         className="py-32 px-6 text-center text-slate-900 dark:text-slate-100"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-5xl font-bold mb-6 text-slate-900 dark:text-white">Skills & Technologies</h2>
@@ -112,7 +113,8 @@ export default function Skills() {
                     <motion.div
                       className="h-3 bg-slate-900 dark:bg-slate-100 rounded-full"
                       initial={{ width: "0%" }}
-                      animate={{ width: `${item.level}%` }}
+                      whileInView={{ width: `${item.level}%` }}
+                      viewport={{ once: true }}
                       transition={{ duration: 1 }}
                     />
                   </div>

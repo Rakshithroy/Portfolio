@@ -66,7 +66,8 @@ export default function Projects() {
       id="projects"
       className="py-32 px-6 text-center"
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8 }}
     >
       <h2 className="text-5xl font-bold mb-6 text-slate-900 dark:text-white">Projects</h2>
@@ -101,8 +102,11 @@ export default function Projects() {
             key={index}
             className="p-8 ios-card rounded-2xl transition hover:shadow-xl text-left"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             <h3 className="text-2xl font-semibold mb-2 text-slate-900 dark:text-white">{project.title}</h3>
             {"institution" in project && (
