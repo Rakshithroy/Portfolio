@@ -43,38 +43,38 @@ export default function Certifications() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <motion.section
-      id="certifications"
-      className="py-32 px-6 text-center bg-white dark:bg-black"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">🎓 Certifications & Achievements</h2>
-      <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+      <motion.section
+        id="certifications"
+        className="py-32 px-6 text-center text-slate-900 dark:text-slate-100"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h2 className="text-5xl font-bold mb-6 text-slate-900 dark:text-white">🎓 Certifications & Achievements</h2>
+        <p className="mt-2 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
         Continuous learning keeps me ahead in tech. These credentials validate my skills in cloud, DevOps, and software engineering.
       </p>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-        {certifications.map((cert, index) => (
-          <motion.div
-            key={index}
-            className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg text-left relative"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-          >
-            <div className="flex items-center space-x-4">
-              <Image src={cert.companyLogo} alt={cert.issuer} width={50} height={50} className="rounded-md" />
-              <div>
-                <h3 className="text-2xl font-semibold text-black dark:text-white">{cert.title}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{cert.issuer}</p>
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          {certifications.map((cert, index) => (
+            <motion.div
+              key={index}
+              className="p-8 ios-card rounded-2xl transition hover:shadow-xl text-left relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+            >
+              <div className="flex items-center space-x-4">
+                <Image src={cert.companyLogo} alt={cert.issuer} width={50} height={50} className="rounded-md" />
+                <div>
+                  <h3 className="text-2xl font-semibold text-slate-900 dark:text-white">{cert.title}</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{cert.issuer}</p>
+                </div>
               </div>
-            </div>
 
-            {expanded === index && (
-              <p className="mt-4 text-gray-700 dark:text-gray-300">{cert.description}</p>
-            )}
+              {expanded === index && (
+                <p className="mt-4 text-slate-700 dark:text-slate-300">{cert.description}</p>
+              )}
 
             {cert.badge && (
               <div className="mt-4 flex justify-center">

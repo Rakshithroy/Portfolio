@@ -64,29 +64,29 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-32 px-6 text-center bg-white dark:bg-black"
+      className="py-32 px-6 text-center"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">Projects</h2>
-      <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+      <h2 className="text-5xl font-bold mb-6 text-slate-900 dark:text-white">Projects</h2>
+      <p className="mt-2 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
         A showcase of my academic and personal projects demonstrating practical solutions and technical depth.
       </p>
 
       {/* Toggle Button */}
       <div className="mt-10 flex justify-center gap-4">
         <button
-          className={`px-8 py-3 rounded-full text-white font-semibold shadow transition ${
-            showAcademic ? "bg-black dark:bg-white dark:text-black" : "bg-gray-500 hover:bg-gray-600"
+          className={`ios-card px-8 py-3 rounded-full font-semibold transition ${
+            showAcademic ? "" : "opacity-50"
           }`}
           onClick={() => setShowAcademic(true)}
         >
           Academic Projects
         </button>
         <button
-          className={`px-8 py-3 rounded-full text-white font-semibold shadow transition ${
-            !showAcademic ? "bg-black dark:bg-white dark:text-black" : "bg-gray-500 hover:bg-gray-600"
+          className={`ios-card px-8 py-3 rounded-full font-semibold transition ${
+            !showAcademic ? "" : "opacity-50"
           }`}
           onClick={() => setShowAcademic(false)}
         >
@@ -99,21 +99,21 @@ export default function Projects() {
         {(showAcademic ? academicProjects : personalProjects).map((project, index) => (
           <motion.div
             key={index}
-            className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg text-left"
+            className="p-8 ios-card rounded-2xl transition hover:shadow-xl text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
-            <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">{project.title}</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-slate-900 dark:text-white">{project.title}</h3>
             {"institution" in project && (
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{project.institution}</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">{project.institution}</p>
             )}
-            <p className="mb-4 text-gray-700 dark:text-gray-300">{project.description}</p>
+            <p className="mb-4 text-slate-700 dark:text-slate-300">{project.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.techStack.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 bg-black text-white dark:bg-white dark:text-black text-xs font-semibold rounded-full"
+                  className="px-3 py-1 ios-card text-xs font-semibold"
                 >
                   {tech}
                 </span>
