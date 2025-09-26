@@ -4,10 +4,13 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-20 px-6 text-center">
+    <footer className="relative text-white py-20 px-6 text-center overflow-hidden">
+      {/* Liquid Glass background layers */}
+      <div aria-hidden className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-gradient-to-tr from-cyan-400/20 via-blue-500/20 to-purple-500/20 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-fuchsia-400/20 via-rose-500/20 to-amber-400/20 blur-3xl" />
       <motion.div
         id="contact"
-        className="max-w-4xl mx-auto"
+        className="relative max-w-4xl mx-auto rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-2xl px-8 py-12"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -18,26 +21,63 @@ export default function Footer() {
         </p>
 
         {/* Contact Links */}
-        <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4 text-lg">
-          <a href="mailto:Rakshithroygantagogula@gmail.com" className="hover:underline transition">
+        <div className="mt-10 flex flex-wrap justify-center gap-3 text-lg">
+          <a
+            href="mailto:Rakshithroygantagogula@gmail.com"
+            aria-label="Send email to Rakshith Roy"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition"
+          >
             📧 Email
           </a>
-          <a href="tel:+19727304157" className="hover:underline transition">
+          <a
+            href="tel:+19727304157"
+            aria-label="Call Rakshith Roy"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition"
+          >
             📞 (972) 730-4157
           </a>
-          <a href="https://www.linkedin.com/in/rakshith-roy" target="_blank" className="hover:underline transition">
+          <a
+            href="https://www.linkedin.com/in/rakshith-roy"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open LinkedIn profile"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition"
+          >
             💼 LinkedIn
           </a>
-          <a href="https://github.com/Rakshithroy" target="_blank" className="hover:underline transition">
+          <a
+            href="https://github.com/Rakshithroy"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open GitHub profile"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition"
+          >
             💻 GitHub
           </a>
-          <a href="/Rakshith_Roy_Resume.pdf" download className="hover:underline transition">
+          <a
+            href="/Rakshith_Roy_Resume.pdf"
+            download
+            aria-label="Download resume"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition"
+          >
             📂 Download Resume
           </a>
-          <a href="https://www.instagram.com/_rakshithroy_/" target="_blank" className="hover:underline transition">
+          <a
+            href="https://www.instagram.com/_rakshithroy_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Instagram profile"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition"
+          >
             📷 Instagram
           </a>
-          <a href="https://x.com/rakshithroy2?s=21" target="_blank" className="hover:underline transition">
+          <a
+            href="https://x.com/rakshithroy2?s=21"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open X (Twitter) profile"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition"
+          >
             🐦 X (Twitter)
           </a>
         </div>
@@ -54,7 +94,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-10 text-gray-500 text-sm">
+        <div className="mt-10 text-white/70 text-sm">
           © {new Date().getFullYear()} Rakshith Roy | All Rights Reserved
         </div>
       </motion.div>

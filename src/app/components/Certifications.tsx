@@ -6,6 +6,14 @@ import Image from "next/image";
 
 const certifications = [
   {
+    title: "Databricks Academy Accreditation – Generative AI Fundamentals",
+    issuer: "Databricks",
+    companyLogo: "/icons/databricks.png", // Databricks Logo
+    badge: "/icons/databricks-genai.png", // Databricks Badge
+    description: "Accreditation covering foundations of Generative AI, LLMs, and applied use cases on the Databricks platform.",
+    link: "https://www.databricks.com/training/certification/academy-accreditation-generative-ai-fundamentals",
+  },
+  {
     title: "AWS Certified Solutions Architect – Associate",
     issuer: "Amazon Web Services",
     companyLogo: "/icons/aws.png", // AWS Logo

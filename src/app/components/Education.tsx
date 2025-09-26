@@ -29,27 +29,25 @@ export default function Education() {
 
         {/* 🔹 Education Details */}
         <div className="w-full md:w-1/2 text-left max-w-2xl">
-          <h3 className="text-2xl font-semibold">Master of Science in Information Technology & Management</h3>
+          <h3 className="text-2xl font-semibold">Master of Science (M.S.) in Information Technology & Management</h3>
           <p className="text-gray-500 dark:text-gray-400">University of Texas at Dallas (2022 - 2024)</p>
-
           <p className="mt-4 text-gray-700 dark:text-gray-300">
-            Studying at UT Dallas has been a transformative experience, shaping my technical skills and deepening my understanding of scalable cloud architectures, AI-driven solutions, and enterprise software development.
+            Completed my Master&apos;s at The University of Texas at Dallas with a focus on Artificial Intelligence, Machine Learning, and Cloud Systems. Gained strong expertise in scalable architectures, LLMs/Generative AI, and enterprise software engineering practices.
           </p>
-
           <p className="mt-2 text-gray-700 dark:text-gray-300">
-            From hands-on capstone projects to collaborating with talented peers, UTD provided me with an innovative and research-driven environment to thrive as a software engineer.
+            Academic journey included research-driven projects such as RAG assistants, ETL monitoring dashboards with GenAI insights, and personalized recommender systems. Collaborated with peers and faculty on capstone work bridging AI and cloud engineering.
           </p>
 
           {/* 🔹 Relevant Coursework */}
           <div className="mt-4">
             <h4 className="text-lg font-semibold">📚 Relevant Coursework:</h4>
             <ul className="mt-2 text-gray-600 dark:text-gray-400 list-disc list-inside">
-              <li>Agile Project Management</li>
-              <li>Cloud Computing Fundamentals</li>
-              <li>Object-Oriented Programming in Python</li>
-              <li>Data Structures and Algorithms</li>
+              <li>Machine Learning & Generative AI</li>
+              <li>Cloud Computing & Big Data</li>
+              <li>Advanced Database Management</li>
+              <li>Data Structures & Algorithms</li>
               <li>Systems Programming</li>
-              <li>Database Foundations</li>
+              <li>Agile Project Management</li>
             </ul>
           </div>
 
@@ -57,9 +55,11 @@ export default function Education() {
           <div className="mt-6 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow-md">
             <h4 className="text-lg text-black font-semibold">🏆 Leadership & Achievements</h4>
             <p className="mt-2 text-gray-700 dark:text-gray-300">
-              Head of Social Media Team, Lion&apos;s Club (2022 - 2024)
-              Directed campaigns that boosted **social media engagement by 40%**, effectively promoting club initiatives.
+              Served as Head of Social Media Team, Lion&apos;s Club (2022 – 2024), leading campaigns that boosted engagement by 40%. Presented graduate-level projects in AI/ML and recognized for innovative use of LangChain and HuggingFace in academic settings.
             </p>
+            <ul className="mt-3 text-gray-700 dark:text-gray-300 list-disc list-inside">
+              <li>Certification: Databricks Academy Accreditation – Generative AI Fundamentals (2024).</li>
+            </ul>
           </div>
         </div>
       </div>

@@ -50,7 +50,7 @@ export default function HomePage() {
       {/* 🔥 Dark Mode Toggle */}
       <button
         onClick={toggleDarkMode}
-        className="fixed bottom-5 right-5 p-3 rounded-full bg-gray-200 dark:bg-gray-800 shadow-md"
+        className="fixed bottom-5 right-5 p-3 rounded-full border border-white/20 bg-white/10 text-white backdrop-blur-xl shadow-lg hover:bg-white/20 hover:shadow-xl transition"
       >
         {darkMode ? "🌞" : "🌙"}
       </button>

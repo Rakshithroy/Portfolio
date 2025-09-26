@@ -23,11 +23,14 @@ export default function BeyondWork() {
   return (
     <motion.section
       id="beyond-work"
-      className="w-full py-16 bg-gray-900 text-white text-center"
+      className="relative w-full py-24 text-center text-white bg-gradient-to-b from-black via-gray-900 to-black overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
+      {/* Background Gradient Orbs */}
+      <div aria-hidden className="pointer-events-none absolute -top-20 -left-20 h-96 w-96 rounded-full bg-gradient-to-tr from-cyan-400/20 via-blue-500/20 to-purple-500/20 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-20 -right-20 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-fuchsia-400/20 via-rose-500/20 to-amber-400/20 blur-3xl" />
       {/* 🔹 Title */}
       <motion.h2
         className="text-5xl font-bold mb-8"
@@ -51,7 +54,7 @@ export default function BeyondWork() {
         >
           {travelImages.map((image, index) => (
             <SwiperSlide key={index} className="flex justify-center">
-              <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
+              <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg">
                 <Image 
                   src={image || "/default-image.jpg"} 
                   alt={`Travel ${index + 1}`} 
@@ -66,7 +69,7 @@ export default function BeyondWork() {
 
       {/* 🔹 Text Content Below */}
       <motion.p
-        className="mt-8 text-lg max-w-3xl mx-auto px-6"
+        className="mt-12 text-lg max-w-3xl mx-auto px-6 text-white/80"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5 }}
