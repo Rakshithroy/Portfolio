@@ -108,12 +108,15 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="py-32 px-6 text-center bg-gradient-to-b from-black via-gray-900 to-black text-white"
+      className="relative py-32 px-6 text-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-black dark:to-gray-950 text-white overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-5xl font-bold mb-6 text-white">Projects</h2>
+      <div aria-hidden className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-tr from-cyan-400/30 via-blue-500/20 to-purple-500/20 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-gradient-to-tr from-fuchsia-400/20 via-rose-500/20 to-amber-400/20 blur-3xl" />
+
+      <h2 className="text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Projects</h2>
       <p className="mt-2 text-white/70 max-w-2xl mx-auto">
         A showcase of my academic and personal projects demonstrating practical solutions and technical depth.
       </p>
@@ -180,7 +183,7 @@ export default function Projects() {
           .map((project, index) => (
           <motion.div
             key={index}
-            className="p-8 rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-lg transition text-left will-change-transform hover:scale-[1.01] hover:[transform:perspective(1000px)_rotateX(1deg)_rotateY(-1deg)]"
+            className="p-8 rounded-3xl border border-white/2 bg-white/20 dark:bg-white/10 backdrop-blur-2xl shadow-lg transition text-left will-change-transform hover:scale-[1.01] hover:[transform:perspective(1000px)_rotateX(1deg)_rotateY(-1deg)]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}

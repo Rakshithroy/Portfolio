@@ -8,8 +8,8 @@ const certifications = [
   {
     title: "Databricks Academy Accreditation – Generative AI Fundamentals",
     issuer: "Databricks",
-    companyLogo: "/icons/databricks.png", // Databricks Logo
-    badge: "/icons/databricks-genai.png", // Databricks Badge
+    companyLogo: "/icons/databricks.jpeg", // Databricks Logo
+    badge: "/icons/Databricks_bage.png", // Databricks Badge
     description: "Accreditation covering foundations of Generative AI, LLMs, and applied use cases on the Databricks platform.",
     link: "https://www.databricks.com/training/certification/academy-accreditation-generative-ai-fundamentals",
   },
@@ -53,12 +53,15 @@ export default function Certifications() {
   return (
     <motion.section
       id="certifications"
-      className="py-32 px-6 text-center bg-white dark:bg-black"
+      className="relative py-32 px-6 text-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-black dark:to-gray-950 overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">🎓 Certifications & Achievements</h2>
+      <div aria-hidden className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-tr from-cyan-400/30 via-blue-500/20 to-purple-500/20 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-gradient-to-tr from-fuchsia-400/20 via-rose-500/20 to-amber-400/20 blur-3xl" />
+
+      <h2 className="text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">🎓 Certifications & Achievements</h2>
       <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
         Continuous learning keeps me ahead in tech. These credentials validate my skills in cloud, DevOps, and software engineering.
       </p>
@@ -67,7 +70,7 @@ export default function Certifications() {
         {certifications.map((cert, index) => (
           <motion.div
             key={index}
-            className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg text-left relative"
+            className="p-8 glass-card bg-white/70 dark:bg-black/40 transition hover:shadow-xl text-left relative"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: index * 0.2 }}
@@ -85,7 +88,7 @@ export default function Certifications() {
             )}
 
             {cert.badge && (
-              <div className="mt-4 flex justify-center">
+              <div className="mt-4 flex justify-center glass-card p-4">
                 <Image src={cert.badge} alt="Certification Badge" width={150} height={150} className="rounded-md" />
               </div>
             )}

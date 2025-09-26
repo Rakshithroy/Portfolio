@@ -1,21 +1,33 @@
 "use client";
 
-import { useState } from "react";
-import { Link } from "react-scroll";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 16);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
+    <nav className="fixed top-0 left-0 w-full z-[60] mix-blend-normal">
       <div className="max-w-7xl mx-auto px-6 py-3">
-        <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-lg px-5 py-3 flex justify-between items-center">
+        <div
+          className={`rounded-2xl px-5 py-3 flex justify-between items-center backdrop-blur-2xl mix-blend-normal transition-colors duration-300
+    ${scrolled ? "border border-white/30 bg-black/50 shadow-2xl" : "border border-white/20 bg-white/10 shadow-lg"}`}
+        >
           {/* Logo */}
           <motion.div
             className="flex items-center gap-2"
@@ -39,34 +51,19 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-8 text-lg text-white/80">
             <li>
-              <Link
-                to="about"
-                smooth={true}
-                duration={500}
-                className="hover:text-white transition cursor-pointer"
-              >
+              <a href="/#about" className="hover:text-white transition">
                 About
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                className="hover:text-white transition cursor-pointer"
-              >
+              <a href="/#projects" className="hover:text-white transition">
                 Projects
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                className="hover:text-white transition cursor-pointer"
-              >
+              <a href="/#contact" className="hover:text-white transition">
                 Contact
-              </Link>
+              </a>
             </li>
             <li>
               <a
@@ -92,37 +89,19 @@ export default function Navbar() {
           <div className="mx-4 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-lg p-6 text-white">
             <ul className="flex flex-col space-y-4 text-lg text-white/85">
               <li>
-                <Link
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  className="hover:text-white transition cursor-pointer"
-                  onClick={toggleMenu}
-                >
+                <a href="/#about" className="hover:text-white transition" onClick={toggleMenu}>
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="projects"
-                  smooth={true}
-                  duration={500}
-                  className="hover:text-white transition cursor-pointer"
-                  onClick={toggleMenu}
-                >
+                <a href="/#projects" className="hover:text-white transition" onClick={toggleMenu}>
                   Projects
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to="contact"
-                  smooth={true}
-                  duration={500}
-                  className="hover:text-white transition cursor-pointer"
-                  onClick={toggleMenu}
-                >
+                <a href="/#contact" className="hover:text-white transition" onClick={toggleMenu}>
                   Contact
-                </Link>
+                </a>
               </li>
               <li>
                 <a

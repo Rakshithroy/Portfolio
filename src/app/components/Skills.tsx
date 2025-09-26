@@ -95,12 +95,14 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="py-32 px-6 text-center bg-white dark:bg-black"
+      className="relative py-32 px-6 text-center bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-black dark:to-gray-950 overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">Skills & Technologies</h2>
+      <div aria-hidden className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-tr from-cyan-400/30 via-blue-500/20 to-purple-500/20 blur-3xl" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-gradient-to-tr from-fuchsia-400/20 via-rose-500/20 to-amber-400/20 blur-3xl" />
+      <h2 className="text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">Skills & Technologies</h2>
       <p className="mt-2 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
         A curated showcase of my technical expertise, honed through real-world projects and industry experience.
       </p>
@@ -109,8 +111,9 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="p-8 bg-gray-50 dark:bg-gray-900 rounded-2xl shadow transition hover:shadow-lg"
+            className="relative p-8 rounded-2xl border border-white/25 bg-white/15 dark:bg-white/10 backdrop-blur-2xl shadow-xl transition hover:shadow-2xl"
           >
+            <div aria-hidden className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-white/25 blur-3xl" />
             <h3 className="text-2xl font-semibold mb-6 text-black dark:text-white">{skill.category}</h3>
             {skill.items.map((item, i) => (
               <div key={i} className="mb-5">
@@ -120,7 +123,7 @@ export default function Skills() {
                 </div>
                 <div className="mt-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
                   <motion.div
-                    className="h-3 bg-black dark:bg-white rounded-full"
+                    className="h-3 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500"
                     initial={{ width: "0%" }}
                     animate={{ width: `${item.level}%` }}
                     transition={{ duration: 1 }}

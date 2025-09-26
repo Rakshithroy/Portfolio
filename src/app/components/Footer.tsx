@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative text-white py-20 px-6 text-center overflow-hidden">
+    <footer className="relative text-white py-20 px-6 text-center overflow-hidden glass-footer">
       {/* Liquid Glass background layers */}
       <div aria-hidden className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-gradient-to-tr from-cyan-400/20 via-blue-500/20 to-purple-500/20 blur-3xl" />
       <div aria-hidden className="pointer-events-none absolute -bottom-24 -right-24 h-[28rem] w-[28rem] rounded-full bg-gradient-to-tr from-fuchsia-400/20 via-rose-500/20 to-amber-400/20 blur-3xl" />
@@ -16,14 +16,14 @@ export default function Footer() {
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-5xl font-bold mb-4">Let&apos;s Connect</h2>
-        <p className="mt-2 text-gray-400 max-w-2xl mx-auto">
+        <p className="mt-2 text-white/80 max-w-2xl mx-auto">
           Open to exciting opportunities and meaningful collaborations. Drop me a line!
         </p>
 
         {/* Contact Links */}
         <div className="mt-10 flex flex-wrap justify-center gap-3 text-lg">
           <a
-            href="mailto:Rakshithroygantagogula@gmail.com"
+            href="mailto:rakshithroygantagogula@gmail.com"
             aria-label="Send email to Rakshith Roy"
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition"
           >
@@ -83,14 +83,14 @@ export default function Footer() {
         </div>
 
         {/* Optional Map */}
-        <div className="mt-12">
+        <div className="mt-12 glass-card max-w-3xl mx-auto p-2">
           <iframe
             title="Location Map"
-            className="w-full max-w-lg h-72 mx-auto rounded-xl shadow-lg"
+            className="w-full h-80 rounded-xl"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.3883288177385!2d-96.7970!3d32.7767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9910c52a47fb%3A0xe6a8df9f0e3fef5a!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1647831369185!5m2!1sen!2sus"
-            allowFullScreen
             loading="lazy"
-          ></iframe>
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
 
         {/* Copyright */}

@@ -18,17 +18,19 @@ export default function About() {
       <h2 className="text-5xl font-bold mb-10 text-white">About Me</h2>
       <div className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto gap-16">
         {/* Profile Image */}
-        <div className="relative w-56 h-56 md:w-72 md:h-72 flex-shrink-0 rounded-full overflow-hidden shadow-lg">
-          <Image 
-            src="/IMG_2296.JPG" 
-            fill 
-            className="object-cover" 
-            alt="Rakshith Roy Gantagogula"
-          />
+        <div className="glass-card p-1 rounded-full">
+          <div className="relative w-56 h-56 md:w-72 md:h-72 flex-shrink-0 rounded-full overflow-hidden">
+            <Image 
+              src="/IMG_2296.JPG" 
+              fill 
+              className="object-cover" 
+              alt="Rakshith Roy Gantagogula"
+            />
+          </div>
         </div>
 
         {/* About Content */}
-        <div className="text-left max-w-2xl space-y-6">
+        <div className="glass-card text-left max-w-2xl space-y-6 p-8 md:p-10">
           <p className="text-xl text-white/80 leading-relaxed">
             Hi! I&apos;m <span className="font-bold text-white">Rakshith Roy Gantagogula</span> — an AI/ML Engineer with <span className="font-bold">3+ years</span> of experience delivering scalable Generative AI, LLM, and MLOps solutions. I specialize in building <span className="text-cyan-300">end-to-end AI platforms</span>, <span className="text-cyan-300">LLM applications</span>, and <span className="text-cyan-300">cloud-native systems</span> that drive measurable business impact.
           </p>
